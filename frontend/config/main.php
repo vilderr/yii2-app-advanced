@@ -7,43 +7,67 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'app-frontend',
-    'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'id'                  => 'app-frontend',
+    'name'                => 'Bigmall',
+    'language'            => 'ru-RU',
+    'basePath'            => dirname(__DIR__),
+    'aliases'             => [
+        '@static' => $params['staticHostInfo'],
+    ],
+    'homeUrl' => '/',
+    'bootstrap'           => [
+        'log',
+        'common\SetUp',
+        'frontend\SetUp'
+    ],
     'controllerNamespace' => 'frontend\controllers',
-    'components' => [
-        'request' => [
-            'csrfParam' => '_csrf-frontend',
+    'components'          => [
+        'request'      => [
+            'csrfParam'           => '_csrf-frontend',
+            'cookieValidationKey' => $params['cookieValidationKey'],
+            'baseUrl' => '',
         ],
         'user' => [
-            'identityClass' => 'common\models\User',
+            'identityClass' => 'common\models\user\User',
             'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
+            'identityCookie' => [
+                'name' => '_identity',
+                'httpOnly' => true,
+                'domain' => $params['cookieDomain'],
+            ],
+            'loginUrl' => ['auth/login'],
         ],
-        'session' => [
-            // this is the name of the session cookie used for login on the frontend
-            'name' => 'advanced-frontend',
+        'session'      => [
+            'name'         => '_session',
+            'cookieParams' => [
+                'domain'   => $params['cookieDomain'],
+                'httpOnly' => true,
+            ],
         ],
-        'log' => [
+        'log'          => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
+            'targets'    => [
                 [
-                    'class' => 'yii\log\FileTarget',
+                    'class'  => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
+                ],
+                [
+                    'class'          => 'yii\log\FileTarget',
+                    'exportInterval' => 1,
+                    'categories'     => ['info'],
+                    'levels'         => ['info'],
+                    'logFile'        => '@runtime/logs/info.log',
+                    'logVars'        => [],
                 ],
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'app/error',
         ],
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        */
+        'frontendUrlManager' => require __DIR__ . '/urlManager.php',
+        'urlManager'         => function () {
+            return Yii::$app->get('frontendUrlManager');
+        },
     ],
-    'params' => $params,
+    'params'              => $params,
 ];

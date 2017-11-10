@@ -1,0 +1,30 @@
+html, body {
+  height: 100%; }
+
+body {
+  background-color: #f8f9fa !important; }
+
+.wrap {
+  height: 100%; }
+
+.site-offline {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100% !important;
+  align-items: center !important;
+  justify-content: center !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+  text-align: center; }
+  .site-offline h1 {
+    text-transform: uppercase;
+    line-height: 1.1; }
+
+.site-offline .status {
+  font-size: 10rem;
+  color: #cacaca;
+  line-height: 1; }
+
+/*# sourceMappingURL=offline.css.map */

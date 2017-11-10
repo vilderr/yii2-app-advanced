@@ -1,0 +1,189 @@
+.product-slider {
+  .bx-wrapper {
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+
+    .bx-controls {
+      position: relative;
+      display: inline-block;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 2.5rem;
+
+      .bx-pager {
+        display: inline-block;
+        height: 2rem;
+
+        .bx-pager-item {
+          display: inline-block;
+          margin-top: .5rem;
+
+          + .bx-pager-item {
+            margin-left: .5rem;
+          }
+
+          a {
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            border-radius: .5rem;
+            background: #e1e1e1;
+            text-indent: -9999px;
+
+            &.active,
+            &:hover {
+              background: #26aae1;
+            }
+          }
+        }
+      }
+
+      .bx-controls-direction {
+        a {
+          line-height: 1;
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          width: 2rem;
+          height: 2rem;
+          font-size: 2rem;
+          color: #525252;
+
+          &.bx-prev {
+            left: 0;
+          }
+
+          &.bx-next {
+            right: 0;
+          }
+
+          &:hover {
+            color: #26aae1;
+          }
+        }
+      }
+    }
+  }
+  .bx-viewport {
+    position: relative;
+    width: 100%;
+  }
+
+  @media (max-width: 575px) {
+    .slider-title {
+      text-align: center;
+    }
+  }
+}
+.product-thumb {
+  .thumb-outer {
+    padding: .1rem .1rem 0;
+    border: 1px solid transparent;
+    min-height: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+
+    .image {
+      > a {
+        display: block;
+        position: relative;
+        padding-top: 125%;
+        margin-bottom: 1rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+
+        .label {
+          position: absolute;
+          right: 1rem;
+          width: 46px;
+          height: 46px;
+          font-weight: bold;
+          line-height: 46px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          -webkit-background-size: contain;
+          -moz-background-size: contain;
+          -o-background-size: contain;
+          background-size: contain;
+          background-color: transparent;
+
+          &.discount {
+            top: 1rem;
+            color: #ffffff;
+            background-image: url("/static/img/discount__bg.png");
+          }
+        }
+      }
+    }
+
+    .title {
+      line-height: 1.1;
+      margin-bottom: .3rem;
+
+      > a {
+        display: inline-block;
+        margin-bottom: .3rem;
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+          color: #26aae1;
+        }
+      }
+
+      .brand {
+        font-style: italic;
+        color: #7f7f7f;
+        text-decoration: underline;
+      }
+    }
+
+    .price {
+
+      .current {
+        font-weight: bold;
+      }
+      .old {
+        color: #b0b0b0;
+      }
+
+      > span + span {
+        margin-left: 1rem;
+      }
+    }
+
+    .links {
+      visibility: hidden;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      a {
+        color: #5d5d5d;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          color: #26aae1;
+        }
+      }
+    }
+
+    &:hover {
+      border-color: #bdbdbd;
+
+      .links {
+        visibility: visible;
+      }
+    }
+  }
+}

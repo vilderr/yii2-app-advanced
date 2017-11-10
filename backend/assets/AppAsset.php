@@ -11,13 +11,25 @@ class AppAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
-    public $css = [
-        'css/site.css',
-    ];
-    public $js = [
-    ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
+        'common\assets\fonts\ProximaNovaAsset',
+        'common\assets\fonts\MaterialDesignAsset',
     ];
+
+    public function init()
+    {
+        $this->publishOptions = [
+            'forceCopy' => YII_ENV_DEV ? true : false,
+        ];
+
+        $this->css = [
+            'css/app.css?' . time(),
+        ];
+
+        $this->js = [
+            'js/app.js?' . time(),
+        ];
+    }
 }

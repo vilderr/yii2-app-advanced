@@ -1,0 +1,124 @@
+.product-slider .bx-wrapper {
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center; }
+  .product-slider .bx-wrapper .bx-controls {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2.5rem; }
+    .product-slider .bx-wrapper .bx-controls .bx-pager {
+      display: inline-block;
+      height: 2rem; }
+      .product-slider .bx-wrapper .bx-controls .bx-pager .bx-pager-item {
+        display: inline-block;
+        margin-top: .5rem; }
+        .product-slider .bx-wrapper .bx-controls .bx-pager .bx-pager-item + .bx-pager-item {
+          margin-left: .5rem; }
+        .product-slider .bx-wrapper .bx-controls .bx-pager .bx-pager-item a {
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          border-radius: .5rem;
+          background: #e1e1e1;
+          text-indent: -9999px; }
+          .product-slider .bx-wrapper .bx-controls .bx-pager .bx-pager-item a.active, .product-slider .bx-wrapper .bx-controls .bx-pager .bx-pager-item a:hover {
+            background: #26aae1; }
+    .product-slider .bx-wrapper .bx-controls .bx-controls-direction a {
+      line-height: 1;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      font-size: 2rem;
+      color: #525252; }
+      .product-slider .bx-wrapper .bx-controls .bx-controls-direction a.bx-prev {
+        left: 0; }
+      .product-slider .bx-wrapper .bx-controls .bx-controls-direction a.bx-next {
+        right: 0; }
+      .product-slider .bx-wrapper .bx-controls .bx-controls-direction a:hover {
+        color: #26aae1; }
+.product-slider .bx-viewport {
+  position: relative;
+  width: 100%; }
+@media (max-width: 575px) {
+  .product-slider .slider-title {
+    text-align: center; } }
+
+.product-thumb .thumb-outer {
+  padding: .1rem .1rem 0;
+  border: 1px solid transparent;
+  min-height: 100%;
+  background-color: #ffffff;
+  text-align: center;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
+  .product-thumb .thumb-outer .image > a {
+    display: block;
+    position: relative;
+    padding-top: 125%;
+    margin-bottom: 1rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain; }
+    .product-thumb .thumb-outer .image > a .label {
+      position: absolute;
+      right: 1rem;
+      width: 46px;
+      height: 46px;
+      font-weight: bold;
+      line-height: 46px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+      background-color: transparent; }
+      .product-thumb .thumb-outer .image > a .label.discount {
+        top: 1rem;
+        color: #ffffff;
+        background-image: url("/static/img/discount__bg.png"); }
+  .product-thumb .thumb-outer .title {
+    line-height: 1.1;
+    margin-bottom: .3rem; }
+    .product-thumb .thumb-outer .title > a {
+      display: inline-block;
+      margin-bottom: .3rem;
+      color: #000000;
+      text-decoration: none;
+      text-align: center; }
+      .product-thumb .thumb-outer .title > a:hover {
+        color: #26aae1; }
+    .product-thumb .thumb-outer .title .brand {
+      font-style: italic;
+      color: #7f7f7f;
+      text-decoration: underline; }
+  .product-thumb .thumb-outer .price .current {
+    font-weight: bold; }
+  .product-thumb .thumb-outer .price .old {
+    color: #b0b0b0; }
+  .product-thumb .thumb-outer .price > span + span {
+    margin-left: 1rem; }
+  .product-thumb .thumb-outer .links {
+    visibility: hidden;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+    .product-thumb .thumb-outer .links a {
+      color: #5d5d5d;
+      text-decoration: none; }
+      .product-thumb .thumb-outer .links a:hover, .product-thumb .thumb-outer .links a:focus {
+        color: #26aae1; }
+  .product-thumb .thumb-outer:hover {
+    border-color: #bdbdbd; }
+    .product-thumb .thumb-outer:hover .links {
+      visibility: visible; }
+
+/*# sourceMappingURL=producttopslider.css.map */

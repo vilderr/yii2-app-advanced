@@ -12,12 +12,28 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=7.0",
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0"
+        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+        "kartik-v/yii2-widgets": "*",
+        "kartik-v/yii2-dynagrid": "*",
+        "kartik-v/yii2-field-range": "*",
+        "yiisoft/yii2-redis": "^2.0",
+        "paulzi/yii2-nested-sets": "^1.0",
+        "yiisoft/yii2-httpclient": "~2.0.0",
+        "mihaildev/yii2-ckeditor": "^1.0",
+        "mihaildev/yii2-elfinder": "^1.2",
+        "fishvision/yii2-migrate": "^1.0",
+        "yii-dream-team/yii2-upload-behavior": "^1.1",
+        "devgroup/yii2-tag-dependency-helper": "*",
+        "elasticsearch/elasticsearch": "^5.2",
+        "yiisoft/yii2-queue": "~2.0.0",
+        "la-haute-societe/yii2-save-relations-behavior": "^1.2",
+        "yiisoft/yii2-elasticsearch": "~2.0.0",
+        "monolog/monolog": "~1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
